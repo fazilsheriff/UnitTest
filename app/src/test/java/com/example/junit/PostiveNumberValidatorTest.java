@@ -18,21 +18,21 @@ public class PostiveNumberValidatorTest {
     }
 
     @Test
-    public void testOne()
+    public void positiveNumber_checkNegativeNumberIsPostive_returnFalse()
     {
         boolean result=SUT.isPostive(-1);
         Assert.assertThat(result,is(false));
     }
 
     @Test
-    public void tesTwo()
+    public void positiveNumber_checkZeroIsPostive_returnFalse()
     {
         boolean result=SUT.isPostive(0);
         Assert.assertThat(result,is(false));
     }
 
     @Test
-    public  void testThree()
+    public  void postiveNumber_checkPostiveNumberIsPostive_returnTrue()
     {
         boolean result=SUT.isPostive(2);
         Assert.assertThat(result,is(true));
