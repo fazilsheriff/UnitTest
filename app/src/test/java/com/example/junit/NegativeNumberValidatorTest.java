@@ -17,14 +17,14 @@ public class NegativeNumberValidatorTest {
     }
 
     @Test
-    public void testOne()
+    public void negativeNumber_checkPostiveNumberIsNegative_retunFalse()
     {
         boolean result=SUT.isNegattiveNumber(100);
         Assert.assertThat(result,is(false));
     }
 
     @Test
-    public void testTwo()
+    public void negativeNumber_checkNegativeNumberIsNegative_returnTrue()
     {
 
         boolean result=SUT.isNegattiveNumber(-1002);
@@ -32,7 +32,7 @@ public class NegativeNumberValidatorTest {
     }
 
     @Test
-    public void testThree()
+    public void negativeNumber_checkZeroIsNegative_returnFalse()
     {
         boolean result=SUT.isNegattiveNumber(0);
         Assert.assertThat(result,is(false));
