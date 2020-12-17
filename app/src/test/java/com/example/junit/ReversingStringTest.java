@@ -32,4 +32,9 @@ public class ReversingStringTest {
         String result=SUT.reverse("Fazil");
         assertThat(result,is("lizaF"));
     }
+//    @Test
+//    public void reverse_checkNull_returnNull(){
+//        String result=SUT.reverse("Fazil");
+//        assertThat(myString).isNotEmpty();
+//    }
 }

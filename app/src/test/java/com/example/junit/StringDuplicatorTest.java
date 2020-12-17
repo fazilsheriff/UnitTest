@@ -19,8 +19,13 @@ public class StringDuplicatorTest {
 
 
     @Test
-    public void duplicator_checkStringDuplication_duplicationOccured() {
+    public void duplicator_checkStringDuplicationWithTwoCharactes_duplicationOccured() {
         String result=SUT.duplicate("hi");
         assertThat(result,is("hihi"));
+    }
+    @Test
+    public void duplicator_checkStringDuplicationWithWords_duplicationOccured(){
+        String result=SUT.duplicate("Four");
+        assertThat(result,is("FourFour"));
     }
 }

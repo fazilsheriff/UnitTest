@@ -38,7 +38,7 @@ public class IntervalsOverlapDetectorTest {
     }
 
     @Test
-    public void isOverLap_Interval1StartGreaterInterval2End_falseeturned() {
+    public void isOverLap_Interval1StartGreaterInterval2End_falseturned() {
         Interval interval1=new Interval(100,150);
         Interval interval2=new Interval(8,12);
         boolean result=SUT.isOverlap(interval1,interval2);
