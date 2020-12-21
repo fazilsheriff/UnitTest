@@ -1,4 +1,4 @@
-package com.example.junit;
+package com.example.junit.part_one;
 
 public class PostiveNumberValidator {
 

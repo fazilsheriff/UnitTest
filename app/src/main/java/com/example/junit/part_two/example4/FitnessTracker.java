@@ -1,4 +1,4 @@
-package com.example.junit;
+package com.example.junit.part_two.example4;
 
 public class FitnessTracker {
     public static final int RUN_STEPS_FACTOR = 2;

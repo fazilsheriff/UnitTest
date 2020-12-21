@@ -1,4 +1,6 @@
-package com.example.junit;
+package com.example.junit.part_one;
+
+import com.example.junit.part_one.ReversingString;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -32,6 +34,15 @@ public class ReversingStringTest {
         String result=SUT.reverse("Fazil");
         assertThat(result,is("lizaF"));
     }
+
+    @Test(expected = NullPointerException.class)
+    public void reverse_null_throwsNPE()  {
+        SUT.reverse(null);
+    }
+
+
+
+
 //    @Test
 //    public void reverse_checkNull_returnNull(){
 //        String result=SUT.reverse("Fazil");

@@ -1,4 +1,4 @@
-package com.example.junit;
+package com.example.junit.part_one;
 
 public class IntervalsOverlapDetector {
     public boolean isOverlap(Interval interval1, Interval interval2) {

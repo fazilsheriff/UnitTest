@@ -1,5 +1,7 @@
 package com.example.junit;
 
+import com.example.junit.part_two.example4.FitnessTracker;
+
 import org.junit.Before;
 import org.junit.Test;
 

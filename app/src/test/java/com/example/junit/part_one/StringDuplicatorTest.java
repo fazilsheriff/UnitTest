@@ -1,4 +1,6 @@
-package com.example.junit;
+package com.example.junit.part_one;
+
+import com.example.junit.part_one.StringDuplicator;
 
 import org.junit.Before;
 import org.junit.Test;

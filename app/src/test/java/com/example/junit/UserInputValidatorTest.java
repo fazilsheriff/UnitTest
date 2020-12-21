@@ -1,6 +1,7 @@
 package com.example.junit;
 
-import org.junit.Assert;
+import com.example.junit.part_two.example4.UserInputValidator;
+
 import org.junit.Before;
 import org.junit.Test;
 

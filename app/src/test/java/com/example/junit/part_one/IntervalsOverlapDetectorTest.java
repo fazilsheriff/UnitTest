@@ -1,6 +1,8 @@
-package com.example.junit;
+package com.example.junit.part_one;
 
-import org.junit.Assert;
+import com.example.junit.part_one.Interval;
+import com.example.junit.part_one.IntervalsOverlapDetector;
+
 import org.junit.Before;
 import org.junit.Test;
 
