@@ -15,13 +15,17 @@ import static org.junit.Assert.*;
 public class LoginUseCaseSyncTest {
     private static final String USERNAME = "username";
     private static final String PASSWORD = "Password";
+    private static final String AUTHTOKEN = "authToken";
+
 
     LoginUseCaseSync SUT;
     LoginHttpEndPointSyncTd loginHttpEndPointSyncTd;
+    AuthTokenCacheTd authTokenCacheTd;
     @Before
     public void setUp() throws Exception {
         loginHttpEndPointSyncTd=new LoginHttpEndPointSyncTd();
-        SUT=new LoginUseCaseSync(loginHttpEndPointSyncTd,new AuthTokenCacheTd(),new EventBusPosterTd());
+        authTokenCacheTd=new AuthTokenCacheTd();
+        SUT=new LoginUseCaseSync(loginHttpEndPointSyncTd,authTokenCacheTd,new EventBusPosterTd());
     }
 
     @Test
@@ -40,16 +44,18 @@ public class LoginUseCaseSyncTest {
         public EndpointResult loginSync(String username, String password) throws NetworkErrorException {
             muserName=username;
             mPassword=password;
-            return null;
+            return new EndpointResult(EndpointResultStatus.SUCCESS, AUTHTOKEN);
         }
     }
     private  static class  AuthTokenCacheTd implements AuthTokenCache{
+        String mAuthTokenCache="";
         @Override
         public void cacheAuthToken(String authToken) {
+            mAuthTokenCache=authToken;
         }
         @Override
         public String getAuthToken() {
-            return null;
+            return mAuthTokenCache;
         }
     }
     private static class EventBusPosterTd implements EventBusPoster{
