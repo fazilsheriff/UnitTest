@@ -1,4 +1,4 @@
-package com.example.junit;
+package com.example.junit.part_two.example4;
 
 import com.example.junit.part_two.example4.FitnessTracker;
 

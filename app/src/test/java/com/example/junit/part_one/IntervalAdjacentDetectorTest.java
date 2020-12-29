@@ -42,5 +42,6 @@ IntervalAdjacentDetector SUT;
 
     @Test
     public void name() {
+
     }
 }
